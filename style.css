@@ -1,0 +1,747 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+html{
+  font-size: 10px;
+  font-family: serif;
+  background-image: url("img/background.jpg");
+}
+/* Basic settings */
+
+/* Switch dark-mode start */
+.switch{
+  margin-left: 10px;
+  margin-top: 10px;
+  position: relative;
+  width: 90px;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+}
+.custom-checkbox{
+  display: none;
+}
+.switch-label{
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 20px;
+}
+.switch-main{
+  display: block;
+  width: 200%;
+  margin-left: -100%;
+  transition: margin 0.5s ease-in 0s;
+}
+.switch-main::before, .switch-main::after{
+  display: block;
+  float: left;
+  width: 50%;
+  height: 30px;
+  padding: 0;
+  line-height: 30px;
+  font-size: 14px;
+  color: white;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+.switch-main::before{
+  content: 'Tmavý';
+  padding-left: 10px;
+  background-color: white;
+  color: black;
+}
+.switch-main::after{
+  content: 'Svetlý';
+  padding-right: 10px;
+  background-color: white;
+  color: black;
+  text-align: right;
+}
+.switch-circle{
+  display: block;
+  width: 18px;
+  margin: 6px;
+  background:white;
+  border: 2px solid #999;
+  border-radius: 20px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 56px;
+  transition: all 0.3s ease-in 0s;
+}
+.custom-checkbox:checked + .switch-label .switch-main{
+  margin-left: 0;
+}
+.custom-checkbox:checked + .switch-label .switch-circle{
+  right: 0;
+  background-color: #202020;
+}
+/* Switch dark-mode end */
+
+/* Dark-mode start */
+.container.dark-mode{
+  color: white;
+  background-color: #252525;
+}
+.nav-list.dark-mode{
+  background-color: #252525;
+}
+.nav-link:hover.dark-mode a  {
+  color: white;
+  border-bottom: grey solid 1.5px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+html.dark-mode{
+  background: linear-gradient(to right,#141414, #32323280), url("img/background.jpg");
+}
+/* Dark-mode end */
+
+ /* Star reviews */
+.checked {
+  color: gold;
+}
+.stars {
+  font-size: 30px;
+  text-shadow: -1px 0 black, 0 2px black, 1px 0 black, 0 -1px black;
+}
+.right-align {
+  text-align: center;
+  margin-right: 10px;
+}
+/* Star reviews end*/ 
+
+/* Container */
+.container{
+  margin: 80px auto;
+  padding: 100px;
+  height: 100%;
+  max-width: 1100px;
+  background-color: white;
+  
+  box-shadow: 12px 15px 33px 0px rgba(0,0,0,0.5);
+}
+/* Header start */
+.headline{
+  padding-bottom: 50px;
+  text-align: center;
+  font-size: 2.5rem;
+  letter-spacing: 5px;
+  font-weight: normal;
+  
+}
+.nav-list{
+  text-align: center;
+  list-style-type: none;
+  padding: 0;
+  margin-left:10%;
+  width: 80%;
+  background-color: white;
+}
+.nav-link a{
+  text-decoration: none;
+  color: grey;
+  padding: 0;
+}
+.nav-link{
+  font-size: 30px;;
+  display: inline-block;
+  padding: 0 10px;
+  letter-spacing: 5px;
+  text-align: center;
+}
+.nav-link:hover a {
+  color: black;
+  border-bottom: grey solid 1.5px;
+}
+
+/* Dropdown menu*/
+.dropdown-content {
+  display: none;
+  position: absolute;
+  width: 20%;
+  background-color: #f1f1f1;
+  min-width: 8%;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  padding: 8px;
+  margin: auto;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.nav-link: a:hover {background-color: #ddd;}
+
+.dropdown-content a:hover {background-color: #ddd; }
+
+.nav-link:hover .dropdown-content {display: block;}
+
+
+/*    */
+.top-nav{
+  position: relative;
+}
+.top-nav:before{
+  content: "";
+  display: block;
+  width: 20%;
+  height: 1px;
+  background-color: grey;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  z-index: 1;
+}
+.top-nav:after{
+  content: "";
+  display: block;
+  width: 20%;
+  height: 1px;
+  background-color: grey;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  z-index: 1;
+}
+/* Header ends */
+
+/* Img scaling on hover start */
+.rev-photos:hover{
+  transform: scale(1.3);
+}
+.rev-photos {
+  transition: 2s;
+}
+/* Img scaling end */
+
+/* Section Home start */
+.panel {
+  margin: 0;
+  display: flex;
+  justify-content: right;
+}
+
+.panel h1 {
+  text-align: center;
+}
+
+
+.home-img{
+  display: block;
+  margin: 5% auto;
+  width: 400px;
+  height: 300px;
+}
+.text-home{
+  display: block;
+  margin: 5% auto;
+  width: 60%;
+}
+.text-home p{
+  font-size: 1.5rem;
+  text-align: justify;
+}
+
+/* Section Home end */
+
+/* Section My skills start */
+.samsung-box{
+  width: 300px;
+  margin: 0% auto;
+  margin-top: 0px;
+  margin-right: 60px;
+  margin-bottom: 0;
+  font-size: 1.7rem;
+  padding: 4%;
+  box-shadow: 12px 15px 33px 0px rgba(0,0,0,0.5);
+  text-shadow: 1px 0 black, 0 1px black, 1px 0 black, 0 1px black;
+}
+.samsung-div{
+  margin: 6% 0;
+}
+.bar-html, .bar-css, .bar-js{
+  margin: 5% 0;
+  display: block;
+  height: 3px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+.html-h3, .css-h3, .js-h3{
+  letter-spacing: 5px;
+}
+.html-h3{
+  color: #f5cab3;
+}
+.css-h3{
+  color: #a8d3da;
+}
+.js-h3{
+  color: #f3ecb8;
+}
+.span-hmtl, .span-css, .span-js{
+  height: 3px;
+  float: left;
+  box-shadow: 2 2 10px rgba(0,0,0,10);
+  background-color: white;
+}
+.span-hmtl{
+  width: 95%;
+  background-color: #202020;
+  border: 3px solid;
+  animation: html 1s;
+}
+.span-css{
+  width: 80%;
+  background-color: #202020;
+  border: 3px solid;
+  animation: css 1s;
+}
+.span-js{
+  width: 90%;
+  background-color: #202020;
+  border: 3px solid;
+  animation: js 1s;
+}
+@keyframes html {
+  0%{
+    width: 0;
+  }
+  100%{
+    width: 95%;
+  }
+}
+@keyframes css {
+  0%{
+    width: 0;
+  }
+  100%{
+    width: 80%;
+  }
+}
+@keyframes js {
+  0%{
+    width: 0;
+  }
+  100%{
+    width: 90%;
+  }
+}
+
+.text-home h1{
+  font-size: 2.5rem;
+  font-weight: normal;
+  margin: 5% 0;
+}
+
+.text-home p{
+  margin-bottom: 30px;
+}
+/* Section My skills end */
+
+/* Section Reviews start */
+.reviews{
+  display: flex;
+}
+.iphone-img{
+  margin: 5% 0;
+  width:0;
+  margin-top: 15%;
+}
+
+.iphone-img img{
+
+  margin-bottom: 30px;
+  margin-top: 15%;
+}
+
+.text-iphone{
+  margin: 5% 0 5% 50%;
+}
+.text-iphone p{
+  font-size: 1.5rem;
+  text-align: justify;
+}
+.text-iphone h1{
+  font-size: 2.5rem;
+  font-weight: normal;
+  font-style: italic;
+  margin-bottom: 5%;
+}
+.samsung-img{
+  margin: 5% 0 5% 10%;
+  width: 0;
+  margin-top: 15%;
+}
+.text-samsung{
+  margin: 5% 0 5% 0;
+  width: 50%;
+}
+.text-samsung p{
+  font-size: 1.5rem;
+  text-align: justify;
+}
+.text-samsung h1{
+  font-size: 2.5rem;
+  font-weight: normal;
+  font-style: italic;
+  margin-bottom: 5%;
+}
+/* Section Reviews end */
+
+/* Section Contact me start */
+.contact-div{
+  margin-top: 7%;
+  margin-bottom: 0;
+  text-align: center;
+  font-size: 2.5rem;
+  letter-spacing: 5px;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+.form-div{
+  background-color: rgba(75, 75, 75, 0.01);
+  width: 500px;
+  margin: 2% auto 7% auto;
+  padding: 2%;
+  border: 1px solid lightgrey;
+  border-radius: 4px;
+  box-shadow: 12px 15px 33px 0px rgba(0,0,0,0.5);
+}
+input[type=text], select, textarea{
+  width: 100%;
+  padding: 2%;
+  margin: 2% 0;
+  border: 2px solid black;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button, input[type=submit]{
+  background-color: white;
+  padding: 4%;
+  margin: 2% auto;
+  border: 1px solid lightgrey;
+  border-radius: 4px;
+  outline: none;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+button:hover, input[type=submit]:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+button:active, input[type=submit]:active {
+  box-shadow: 0 5px rgba(0,0,0,0.24);
+  transform: translateY(4px);
+}
+
+.form-control{
+  margin-bottom: 5px;
+  padding: 20px;
+  position: relative;
+}
+.form-control label{
+  display: inline-block;
+  font-size: 15px;
+}
+.form-control input{
+  border: 2px solid;
+  border-radius: 4px;
+  display: block;
+  padding: 10px;
+  font-size: 14px;
+  width: 100%;
+}
+.form-control i, .form-control-radio i{
+  position: absolute;
+  top: 55px;
+  right: 10px;
+  font-size: 15px;
+  visibility: hidden;
+}
+.form-control.error i{
+  visibility: visible;
+  color: red;
+}
+.form-control.success input{
+  border-color: lightgreen;
+}
+/* Section Contact me end */
+
+/* Footer start */
+footer{
+  padding: 2% 0;
+  border-top: grey solid 1.5px;
+}
+.social-menu ul{
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 10px;
+  display: flex;
+}
+.social-menu ul li{
+  list-style: none;
+  margin: 0 12px;
+}
+.social-menu ul li .fa{
+  font-size: 28px;
+  line-height: 40px;
+  transition: .5s;
+  color: black;
+}
+.social-menu ul li .fa:hover{
+  color: white;
+}
+.social-menu ul li a{
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: white;
+  text-align: center;
+  transition: 0.5s;
+  box-shadow: 0 7px 5px rgba(0, 0, 0, 0.5);
+}
+.social-menu ul li a:hover{
+  transform: translate(0, -10px);
+}
+.social-menu ul li:nth-child(1) a:hover{
+  background-color: #3b5999;
+}
+.social-menu ul li:nth-child(2) a:hover{
+  background-color: #e4405f;
+}
+.social-menu ul li:nth-child(3) a:hover{
+  background-color: #55acee;
+}
+.social-menu ul li:nth-child(4) a:hover{
+  background-color: #cd201f;
+}
+/* Footer end */
+
+/* Tablet css starts*/
+@media screen and (max-width: 1190px) {
+  .nav-link{
+    font-size: 1.8rem;
+    margin-top: 2%;
+  }
+  .top-nav:before{
+    background-color: white;
+  }
+  .top-nav:after{
+    background-color: white;
+  }
+  .rev-photos:hover{
+  transform: scale(1.1);
+  }
+  .nav-underline{
+    width: 100%;
+    height: 1px;
+    background-color: grey;
+    margin-top: 2%;
+    
+  }
+  .text-iphone{
+    margin: 0px;
+  }
+  .text-samsung{
+    margin: 0px;
+    width: 100%;
+  }
+  .text-home{
+    width: 70%;
+  }
+  footer{
+    padding: 5% 0;
+    width: 100%;
+  }
+  .reviews{
+    display: block;
+  }
+  .text-reviews{
+    margin: 0;
+  }
+  .iphone-img{
+    margin: 5% 0;
+    padding-left:10%;
+  }
+  .samsung-img{
+    margin: 5% 0;
+    padding-left: 10%;
+  }
+  .box-container .box{
+    width: 300px;
+    height: calc(300px - 30px);
+  }
+  .samsung-box{
+    
+  }
+  .text-home p{
+    margin-bottom: 10%;
+  }
+  .form-div{
+    width: 100%;
+  }
+}
+/* Tablet css end*/
+
+/* Phone css start*/
+@media screen and (max-width: 590px) {
+  .iphone-img{
+    width: 80%;
+    padding-left: 10px;
+  }
+  .text-iphone{
+    margin: 0px;
+  }
+  .text-samsung{
+    margin: 0px;
+    width: 100%;
+  }
+  .samsung-img{
+    width: 80%;
+    padding-left: 10px;
+  }
+  .rev-photos:hover{
+  transform: scale(1.1);
+  }
+  .form-div{
+    width: 100%;
+  }
+  .samsung-box{
+    width: 100%;
+  }
+
+  #imageMain{
+    width: 100%;
+  }
+
+  .panel{
+    display: block;
+    
+  }
+  .social-menu ul {
+    max-width: 30px;
+  }
+
+}
+/* Phone css end*/
+
+
+@keyframes growProgressBar {
+  0%, 33% { --pgPercentage: 0; }
+  100% { --pgPercentage: var(--value); }
+}
+
+@property --pgPercentage {
+  syntax: '<number>';
+  inherits: false;
+  initial-value: 0;
+}
+
+div[role="progressbar"] {
+  --size: 12rem;
+  --fg: gold;
+  --bg: #def;
+  --pgPercentage: var(--value);
+  animation: growProgressBar 3s 1 forwards;
+  width: var(--size);
+  margin: 10px;
+  height: var(--size);
+  border-radius: 50%;
+  margin-top: 50px;
+  display: grid;
+  place-items: center;
+  background: 
+    radial-gradient(closest-side, white 80%, transparent 0 99.9%, white 0),
+    conic-gradient(var(--fg) calc(var(--pgPercentage) * 1%), var(--bg) 0)
+    ;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: calc(var(--size) / 5);
+  color: #464646;
+}
+
+div[role="progressbar"]::before {
+  counter-reset: percentage var(--value);
+  content: counter(percentage) '%';
+}
+
+/* demo */
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 50px;
+  border-radius: 5px;
+  display: inline-table;
+  margin:30px;
+}
+
+.card:hover {
+  box-shadow: 0 18px 16px 0 rgba(0,0,0,0.2);
+}
+
+.info {
+  padding: 70px;
+  height: 100%;
+  max-width: 1100px;
+  
+  box-shadow: 12px 15px 33px 0px rgba(0,0,0,0.5);
+}
+
+.others {
+  text-align: center;
+  font-size: 1.5rem;
+
+}
+
+.others h1{
+  font-size: 2.5rem;
+  font-weight: normal;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+ tr{
+  border-bottom: 1px solid grey;
+}
+
+.markets h1{
+  font-size: 2.5rem;
+  font-weight: normal;
+}
+
+.markets {
+  margin: 50px;
+}
+
+.market-link {
+  display: inline-block;
+}
+
+.market-link button {
+  padding: 20px;
+}
+
+table button {
+  width: 100px;
+}
+
+table {
+  font-size: 14px;
+}

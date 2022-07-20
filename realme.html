@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="darkmode.js"></script>
+    <title>REmob | RealMe</title>
+    <style>
+      .nav-link .contact{
+        color: black;
+        border-bottom: grey solid 1.5px;
+      }
+      .nav-link .contact.dark-mode{
+        color: white;
+        border-bottom: grey solid 1.5px;
+      }
+    </style>
+  </head>
+  <body>
+      <div class="switch">
+        <input type="checkbox" name="switch" id="custom-switch" class="custom-checkbox">
+        <label for="custom-switch" class="switch-label">
+          <span class="switch-main"></span>
+          <span class="switch-circle"></span>
+        </label>
+      </div>
+    <div class="container">
+      <header>
+        <div class="headline">
+          
+        </div>
+        <nav class="top-nav">
+          <ul class="nav-list">
+            <li class="nav-link">
+              <a href="index.html" class="home">iPhone</a>
+            </li>
+            <li class="nav-link">
+              <a href="samsung.html" class="samsung">Samsung</a>
+            </li>
+            <li class="nav-link">
+              <a href="xiaomi.html" class="xiaomi">Xiaomi</a>
+            </li>
+            <li class="nav-link" >
+              <a href="realme.html" class="contact">Realme</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="nav-underline"></div>
+      </header>
+      <section>
+        <div class="contact-div">
+          <p>contact me</p>
+        </div>
+        <div class="form-div">
+          <form id="form" class="form" action="https://www.google.com/" onsubmit="return valid()">
+      			<div class="form-control">
+      				<label>Name</label>
+      				<input type="text" id="meno" />
+      				<i class="fa fa-exclamation" aria-hidden="true"></i>
+      			</div>
+      			<div class="form-control">
+      				<label>E-mail</label>
+      				<input type="text" id="email" />
+      				<i class="fa fa-exclamation" aria-hidden="true"></i>
+      			</div>
+            <div class="form-control">
+              <label>Message</label>
+      				<textarea id="text" rows="6" cols="60"></textarea>
+      				<i class="fa fa-exclamation" aria-hidden="true"></i>
+      			</div>
+      			<input type="submit" name="" value="Send" style="margin-left:5%;">
+      			<button type="reset" name="button" style="margin-left:5%;">Clear</button>
+      		</form>
+        </div>
+      </section>
+      <footer>
+        <div class="social-menu">
+          <ul>
+            <li><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="https://www.twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="https://www.youtube.com/" target="_blank"><i class="fa fa-youtube"></i></a></li>
+            <li style="margin-left: 90%;"><a style="background-color:Tan;" href="contact.html" target="_blank"><i  class="fa fa-address-book"></i></a></li>
+          </ul>
+        </div>
+      </footer>
+      <script src="formular.js"></script>
+    </div>
+  </body>
+</html>
